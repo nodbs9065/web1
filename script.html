@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+    <title>WEBmake - welcome</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1> <a href="index.html">WEB </a></h1>
+    <input type="button" value="night" onclick="
+      var target = document.querySelector('body')
+      if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = 'blue';
+          i = i + 1;
+        }
+      } ">
+      <br>
+    <ol>
+      <li> <a href="1.html">HTML이란? WEB 만들</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li> <a href="3.html">JavaScript</a></li>
+      <li> <a href="4.html">vidio</a></li>
+      <li> <a href="study.html">study</a></li>
+      <li> <a href="script.html">script</a></li>
+    </ol>
+    <h3>HTML</h3>
+    <p>css인데 style"</p>
+    <p>1+1</p>
+    <p>
+      이벤트입니다. 이벤트는 많지만 기념할만한 이벤트만 기억합시다.
+      클릭했을때,
+      input은 HTML의 태그로 '속성을 넣어준다'라고 이해합시다.<br>
+      botton 타입으로 onclick이벤트를 했을때 경고창을 띄워주는 코드입니<br>
+
+    </p>
+    <p>
+    text타입으로 onchange이벤트는 글자를 적을 수 있습니다.<br>
+    <input type="text" onchange="alert('어쨋든 alert는 경고창을 띄웁니다')">
+    </p>
+    <p>
+    text타입으로 onekey이벤트는 키를 누르는 것만으로도 이벤트를 발생시킵니다.<br>
+    <input type="text" onkeydown="alert('key down!')"></p>
+
+    <script>
+      function colorChan(backg, write){
+        document.bgColor=backg;
+        document.color=write;
+      }
+    </script>
+
+
+
+    <input type="button" value="night" onclick="
+      if(this.value === 'night'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'day';
+      } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'night';
+      } ">
+  </body>
+</html>
